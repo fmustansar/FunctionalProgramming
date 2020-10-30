@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void mainn(String[] args) {
         List<Person> people = List.of(
             new Person("Chaudhry", Gender.MALE),
             new Person("FAIZAN", Gender.MALE),
@@ -40,7 +40,6 @@ public class Main {
     }
 
     @ToString
-    @AllArgsConstructor
     static class Person {
         private final String name;
         private final Gender gender;
