@@ -43,15 +43,17 @@ public class Main {
         System.out.println("Declarative approach");
         //Declarative approach
         System.out.println("MALES");
-        people.stream()
+        List<Human> males2= people.stream()
                 .filter(person -> Gender.MALE.equals(person.gender))
-                //.collect(Collectors.toList()) not needed as I am just printing
-                .forEach(System.out::println);
+                .collect(Collectors.toList());
+        males2.forEach(System.out::println);
+
         System.out.println("FEMALES");
-        people.stream()
+        List<Human> females2= people.stream()
                 .filter(person -> Gender.FEMALE.equals(person.gender))
-                //.collect(Collectors.toList()) not needed as I am just printing
-                .forEach(System.out::println);
+                .collect(Collectors.toList());
+        females2.forEach(System.out::println);
+
     }
 
     @ToString
