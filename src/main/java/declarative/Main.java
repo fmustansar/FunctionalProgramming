@@ -6,6 +6,7 @@ import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -49,8 +50,11 @@ public class Main {
         males2.forEach(System.out::println);
 
         System.out.println("FEMALES");
+
+        Predicate<Human> humanPredicate = person -> Gender.FEMALE.equals(person.gender);
+
         List<Human> females2= people.stream()
-                .filter(person -> Gender.FEMALE.equals(person.gender))
+                .filter(humanPredicate)
                 .collect(Collectors.toList());
         females2.forEach(System.out::println);
 
