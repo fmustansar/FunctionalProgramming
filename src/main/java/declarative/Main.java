@@ -10,7 +10,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void mainnn(String[] args) {
         List<Human> people = List.of(
             new Human("Chaudhry", Gender.MALE),
             new Human("FAIZAN", Gender.MALE),
